@@ -1,57 +1,12 @@
 
 import { useState } from "react";
-
-interface GalleryItem {
-  id: number;
-  src: string;
-  alt: string;
-  type: "image" | "video";
-}
+import { galleryItems } from "../../data/galleryItems";
 
 const GallerySection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState<GalleryItem | null>(null);
+  const [activeItem, setActiveItem] = useState(galleryItems[0]);
 
-  const galleryItems: GalleryItem[] = [
-    {
-      id: 1,
-      src: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=800&q=80",
-      alt: "Night sky with stars",
-      type: "image",
-    },
-    {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80",
-      alt: "Ocean waves",
-      type: "image",
-    },
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80",
-      alt: "Forest landscape",
-      type: "image",
-    },
-    {
-      id: 4,
-      src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-      alt: "Circuit board",
-      type: "image",
-    },
-    {
-      id: 5,
-      src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
-      alt: "Display screens",
-      type: "image",
-    },
-    {
-      id: 6,
-      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
-      alt: "Code on screen",
-      type: "image",
-    },
-  ];
-
-  const openLightbox = (item: GalleryItem) => {
+  const openLightbox = (item) => {
     setActiveItem(item);
     setLightboxOpen(true);
     document.body.style.overflow = "hidden";
@@ -63,14 +18,12 @@ const GallerySection = () => {
   };
 
   const handleNext = () => {
-    if (!activeItem) return;
     const currentIndex = galleryItems.findIndex((item) => item.id === activeItem.id);
     const nextIndex = (currentIndex + 1) % galleryItems.length;
     setActiveItem(galleryItems[nextIndex]);
   };
 
   const handlePrev = () => {
-    if (!activeItem) return;
     const currentIndex = galleryItems.findIndex((item) => item.id === activeItem.id);
     const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
     setActiveItem(galleryItems[prevIndex]);
@@ -109,7 +62,7 @@ const GallerySection = () => {
         </div>
 
         {/* Lightbox */}
-        {lightboxOpen && activeItem && (
+        {lightboxOpen && (
           <div className="fixed inset-0 bg-foreground/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
             <div className="relative max-w-5xl w-full mx-auto animate-fade-in">
               {/* Close button */}

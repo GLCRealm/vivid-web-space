@@ -1,43 +1,11 @@
 
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  image: string;
-  date: string;
-  category: string;
-}
+import { blogPosts } from "../../data/blogPosts";
 
 const BlogSection = () => {
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "Getting Started with React Hooks",
-      excerpt: "Learn how to use React Hooks to simplify your components and manage state effectively.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
-      date: "May 10, 2025",
-      category: "React",
-    },
-    {
-      id: 2,
-      title: "Responsive Design Principles",
-      excerpt: "Discover the key principles behind creating websites that work beautifully across all devices.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-      date: "April 28, 2025",
-      category: "CSS",
-    },
-    {
-      id: 3,
-      title: "Optimizing Website Performance",
-      excerpt: "Techniques to improve your website's loading speed and overall performance.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
-      date: "April 15, 2025",
-      category: "Performance",
-    },
-  ];
+  // We'll display only the first 3 posts in the home page section
+  const featuredPosts = blogPosts.slice(0, 3);
 
   return (
     <section id="blog" className="bg-background section-padding">
@@ -48,7 +16,7 @@ const BlogSection = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {featuredPosts.map((post) => (
             <div
               key={post.id}
               className="bg-card text-card-foreground rounded-lg overflow-hidden shadow-md card-hover"
