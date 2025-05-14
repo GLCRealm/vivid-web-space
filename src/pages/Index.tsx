@@ -1,13 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
+import HomeSection from '../components/sections/HomeSection';
+import AboutSection from '../components/sections/AboutSection';
+import ProjectsSection from '../components/sections/ProjectsSection';
+import BlogSection from '../components/sections/BlogSection';
+import GallerySection from '../components/sections/GallerySection';
+import ContactSection from '../components/sections/ContactSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>My Portfolio</title>
+        <meta name="description" content="Welcome to my professional portfolio showcasing my skills, projects, and blog articles." />
+      </Helmet>
+
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        
+        <main className="flex-grow">
+          <HomeSection />
+          <AboutSection />
+          <ProjectsSection />
+          <BlogSection />
+          <GallerySection />
+          <ContactSection />
+        </main>
+        
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
