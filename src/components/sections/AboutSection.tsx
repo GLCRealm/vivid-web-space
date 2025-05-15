@@ -22,7 +22,7 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square w-full max-w-md mx-auto md:mx-0 bg-muted rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80" 
+                src="https://github.com/GLCRealm/vivid-web-space/blob/main/Picsart_22-09-20_20-57-08-141.jpg" 
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
