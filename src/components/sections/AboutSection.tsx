@@ -1,17 +1,16 @@
 
 const AboutSection = () => {
   const skills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js", 
-    "Node.js",
-    "Tailwind CSS",
-    "UI/UX Design",
-    "Git",
-    "Responsive Design",
+    "Python",
+    "C",
+    "C++",
+    "MySQL",
+    "Java",
+    "JavaScript", 
+    "HTML",
+    "Machine Learning",
+    "Blockchain Technology",
+    "CyberSecurity",
     "RESTful APIs",
   ];
 
@@ -30,15 +29,15 @@ const AboutSection = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Your Name</h3>
+              <h3 className="text-2xl font-semibold mb-4">Anshdeep Rawat</h3>
               <p className="text-muted-foreground mb-6">
-                I'm a passionate web developer and designer with over 5 years of experience 
-                creating modern, responsive websites and applications. My focus is on building 
-                user-friendly interfaces that deliver exceptional digital experiences.
+                I'm a backend developer and AI enthusiast with hands-on experience 
+                building scalable systems, secure APIs, and NLP-powered tools. I enjoy 
+                working at the intersection of machine learning and system design to solve real-world problems.
               </p>
               <p className="text-muted-foreground mb-6">
-                When I'm not coding, you can find me exploring the outdoors, 
-                reading about new technologies, or working on personal projects.
+                When I'm not coding, I’m learning about cybersecurity, exploring new AI models, 
+                or refining personal projects that challenge my skills.
               </p>
               
               <div>

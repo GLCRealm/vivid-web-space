@@ -49,8 +49,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email Me</h3>
-                  <a href="mailto:your.email@example.com" className="text-sm text-muted-foreground hover:text-primary">
-                    your.email@example.com
+                  <a href="mailto:ar1888819@gmail.com" className="text-sm text-muted-foreground hover:text-primary">
+                    ar1888819@gmail.com
                   </a>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const ContactSection = () => {
                 
                 <div className="flex space-x-4">
                   <a
-                    href="https://twitter.com"
+                    href="https://x.com/rawat_ansh41070"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-secondary hover:bg-secondary/80 transition-colors rounded-full p-2"
@@ -78,7 +78,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/anshdeep-rawat-5a9086245/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-secondary hover:bg-secondary/80 transition-colors rounded-full p-2"
@@ -91,7 +91,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/glcrealm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-secondary hover:bg-secondary/80 transition-colors rounded-full p-2"

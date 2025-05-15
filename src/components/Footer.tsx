@@ -1,5 +1,5 @@
 
-import { Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Twitter, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,24 +17,21 @@ const Footer = () => {
           
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
-              <a href="mailto:your.email@example.com" className="text-foreground hover:text-primary transition-colors" aria-label="Email">
+              <a href="mailto:ar1888819@gmail.com" className="text-foreground hover:text-primary transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="Twitter">
+              <a href="https://x.com/rawat_ansh41070" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/anshdeep-rawat-5a9086245/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="Instagram">
-                <Instagram size={20} />
+              <a href="https://github.com/glcrealm" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors" aria-label="GitHub">
+                <Github size={20} />
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} Anshdeep Rawat. All rights reserved.
             </p>
           </div>
         </div>
